@@ -30,17 +30,14 @@ h2 {
   background: var(--secondary-color);
   color: var(--primary-color);
 }
-
-.secondary-color a{
+.secondary-color a {
   position: relative;
   z-index: 2;
   color: var(--primary-color);
 }
-
 .secondary-color a:hover {
   color: #cccccc;
 }
-
 .secondary-color .arrow {
   z-index: 1;
   bottom: 0.5%;
@@ -53,6 +50,7 @@ header {
   height: 100vh;
   overflow: hidden;
 }
+
 .navbar {
   padding-top: 0;
 }
@@ -60,19 +58,23 @@ header {
   font-size: 30px;
 }
 .active {
-  color: var(--accent-color);
-  font-weight: 600;
+  color: var(--accent-color) !important;
+  font-weight: 600 !important;
 }
+
 nav a {
   font-family: var(--headings-font);
   font-size: 30px;
   font-weight: 300;
-  color: var(--primary-color);
+  color: var(--primary-color) !important;
 }
 nav a:hover {
-  color: #CCCCCC;
+  color: #cccccc;
   font-size: 32px;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.navbar-toggler {
+  border-color: var(--primary-color);
 }
 
 a {
@@ -82,7 +84,6 @@ a {
   text-decoration: none;
   color: var(--secondary-color);
 }
-
 a:hover {
   color: var(--accent-color);
   transition: 300ms ease-out;
@@ -90,12 +91,11 @@ a:hover {
 
 .arrow {
   position: relative;
-  bottom: 1.5%;
+  bottom: 1%;
   width: 190px;
   border: 2px solid var(--accent-color);
   box-sizing: border-box;
 }
-
 .point {
   position: relative;
   display: block;
@@ -105,19 +105,20 @@ a:hover {
   color: var(--accent-color);
 }
 
+.img-holder {
+  height: 100%;
+  width: 100%;
+}
 
 /* HOME PAGE */
 #welcome-message {
-  float: left;
-  width: 55%;
   height: 100%;
-  margin-right: 5%;
   padding-top: 13%;
   line-height: 1.5;
 }
 #welcome-message h1 {
   font-family: var(--headings-font);
-  font-size: 64px;
+  font-size: 45px;
   font-weight: 300;
 }
 strong {
@@ -150,15 +151,19 @@ strong {
 #welcome-circle {
   background: var(--accent-color);
   border-radius: 50%;
-  width: 40%;
-  height: 75%;
-  float: left;
-  margin-top: 6%;
+  width: 100%;
+  height: auto;
+  padding-top: 100%;
 }
-#welcome-circle img {
+.close-up {
+  top: -20%;
+  right: 10%;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  height: 135%;
+  width: 100%;
 }
+
 /*? about section ?*/
 .about-accent {
   margin-top: 7%;
@@ -174,8 +179,12 @@ strong {
 .about-content {
   background: var(--primary-color);
   height: 75%;
-  margin-top: 3.5%;
+  float: right;
+  width: 50%;
   padding: 4% 5%;
+  position: relative;
+  margin-top: -46%;
+  margin-right: 2%;
 }
 
 /*? work section ?*/
@@ -202,7 +211,6 @@ strong {
   width: 94%;
   margin: 5% 3% 3% 3%;
 }
-
 .work-section-img {
   position: relative;
   padding-top: 10%;
@@ -211,13 +219,17 @@ strong {
 
 /*? contact section ?*/
 .contact-accent {
-  border-left: 800px solid var(--accent-color);
-  border-bottom: 760px solid transparent;
+  border-left: 95vh solid var(--accent-color);
+  border-bottom: 90vh solid transparent;
 }
-
 .contact-content {
   margin-top: 10%;
-  padding: 4% 5%;
+}
+.contact-section-img {
+  position: relative;
+  width: 80%;
+  top: 9%;
+  left: 15%;
 }
 
 footer {
@@ -225,28 +237,267 @@ footer {
   background: var(--secondary-color);
   padding: 1%;
 }
-
 footer a {
   color: var(--primary-color);
   margin: 1%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+  .close-up {
+    height: 110%;
+    top: -5%;
+  }
+  .btn-primary-outline {
+    bottom: 7%;
+  }
+  .img-holder {
+    width: 75%;
+  }
+  .about-content {
+    top: 43%;
+  }
+}
+
+@media (max-width: 991px) {
+  .row {
+    height: 70vh;
+  }
   #welcome-message {
+    padding: 11%;
     width: 100%;
   }
   #welcome-message a {
-    left: 25%;
+    left: 35%;
   }
   #welcome-circle {
     display: none;
   }
+  .btn-primary-outline {
+    bottom: 14%;
+  }
+  .about-accent {
+    height: 70%;
+    margin-top: 7%;
+  }
   .about-content {
-    margin: 9% 8% 8% 10%;
+    margin: -10% 8% 7% 10%;
+    width: 85%;
   }
   .work-content {
     display: block;
     margin: 0 auto;
-    padding-top: 30%;
+    width: 80%;
+    padding-top: 10%;
+  }
+  .contact-accent {
+    border-left: 80vh solid var(--accent-color);
+    border-bottom: 70vh solid transparent;
+  }
+  .contact-content {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    left: 50%;
+    margin-top: 15%;
+  }
+}
+
+@media (max-width: 768px) {
+  #welcome-message {
+    padding: 10%;
+  }
+  .about-content {
+    margin-top: -20%;
+  }
+  .work-content {
+    margin-top: 20%;
+  }
+  .contact-accent {
+    display: none;
+  }
+  .contact-content {
+    top: 20%;
+    left: 15%;
+    width: 70%;
+  }
+}
+
+@media (max-width: 739px) {
+  body {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 56px;
+  }
+  .navbar-brand {
+    font-size: 26px;
+  }
+  nav a {
+    font-size: 26px;
+  }
+  nav a:hover {
+    font-size: 28px;
+  }
+  a {
+    font-size: 19px;
+  }
+
+  #welcome-message h1 {
+    font-size: 41px;
+  }
+  strong {
+    font-size: 96px;
+  }
+  #welcome-message p {
+    font-size: 46px;
+  }
+  .btn-primary-outline {
+    font-size: 26px;
+  }
+
+  #welcome-message {
+    padding: 10%;
+  }
+  #welcome-message a {
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 698px) {
+  strong {
+    font-size: 80px;
+  }
+  #welcome-message p {
+    font-size: 40px;
+  }
+  #welcome-message a {
+    bottom: 15%;
+  }
+}
+
+@media (max-width: 414px) {
+  #welcome-message a {
+    left: 20%;
+  }
+  .about-accent {
+    margin-top: 20%;
+  }
+  .about-content {
+    margin-top: -30%;
+  }
+}
+
+@media (max-width: 360px) {
+  #welcome-message a {
+    bottom: 5%;
+    left: 20%;
+  }
+  .about-content {
+    height: 90%;
+    margin-top: -35%;
+  }
+}
+
+@media (max-width: 375px) {
+  .about-content {
+    margin-top: -35%;
+  }
+}
+
+@media (max-width: 320px) {
+  h2 {
+    font-size: 40px;
+  }
+  a {
+    font-size: 16px;
+  }
+
+  #welcome-message h1 {
+    font-size: 37px;
+  }
+  strong {
+    font-size: 54px;
+  }
+  #welcome-message p {
+    font-size: 32px;
+  }
+}
+
+/* iPad Pro */
+@media (max-width: 1024px), screen and (orientation: portrait) {
+  body {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 64px;
+  }
+  .navbar-brand {
+    font-size: 34px;
+  }
+  nav a {
+    font-size: 34px;
+  }
+  nav a:hover {
+    font-size: 36px;
+  }
+  a {
+    font-size: 27px;
+  }
+
+  #welcome-message h1 {
+    font-size: 48px;
+  }
+  strong {
+    font-size: 104px;
+  }
+  #welcome-message p {
+    font-size: 54px;
+  }
+  .btn-primary-outline {
+    font-size: 34px;
+  }
+
+  #welcome-message {
+    padding: 10%;
+  }
+  #welcome-message a {
+    bottom: 10%;
+  }
+  .close-up {
+    display: none;
+  }
+  #welcome-circle {
+    display: none;
+  }
+  #welcome-message {
+    width: 100%;
+  }
+  .btn-primary-outline {
+    bottom: 15%;
+    left: 40%;
+  }
+  .img-holder {
+    display: none;
+  }
+  .about-content {
+    top: 65%;
+    width: 96%;
+  }
+  .work-circle-outline {
+    display: none;
+  }
+  .work-content {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 40%;
+  }
+  .contact-accent {
+    display: none;
+  }
+  .contact-content {
+    top: 20%;
+    margin-left: 30%;
+    width: 70%;
   }
 }
