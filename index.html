@@ -31,82 +31,79 @@
     <link href="/styles/site.css" rel="stylesheet" />
     <title>Nicole Michel | Front-end Web Developer</title>
   </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-          <a class="navbar-brand" href="/index.html">Nicole Michel</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="/index.html"
-                  >home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/about.html">about me</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/work.html">my work</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/pages/contact.html">contact me</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <div class="container-fluid">
-        <div class="row align-items-center">
-          <div class="col-7" id="welcome-message">
-            <h1>
-              Hey there,
-              <br />
-              <strong>I'm Nicole</strong>
-              <p>a front-end web developer</p>
-            </h1>
-            <a href="/pages/contact.html" class="btn btn-primary-outline"
-              >hire me</a
+  <nav class="navbar navbar-expand-lg navbar-dark secondary-color pt-3">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">Nicole Michel</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/index.html"
+              >home</a
             >
-          </div>
-          <div class="col-5 position-relative d-none d-lg-block">
-            <div id="welcome-circle"></div>
-            <img
-              src="images/close-up.png"
-              alt="cartoonish drawing of Nicole close up"
-              class="img-fluid position-absolute close-up"
-            />
-          </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/about.html">about me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/work.html">my work</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/contact.html">contact me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div class="container-fluid">
+      <div class="row align-items-center">
+        <div class="col-7" id="welcome-message">
+          <h1>
+            Hey there,
+            <br />
+            <strong>I'm Nicole</strong>
+            <p>a front-end web developer</p>
+          </h1>
+          <a href="/pages/contact.html" class="btn btn-primary-outline"
+            >hire me</a
+          >
+        </div>
+        <div class="col-5 position-relative d-none d-lg-block">
+          <div id="welcome-circle"></div>
+          <img
+            src="images/close-up.png"
+            alt="cartoonish drawing of Nicole close up"
+            class="img-fluid position-absolute close-up"
+          />
         </div>
       </div>
-    </header>
+    </div>
+  </header>
+  <body>
     <div class="container-fluid">
       <div class="row about-section">
-        <div class="row-fluid about-accent">
+        <div class="row-fluid about-accent accent-color">
           <div class="col-lg-6 d-none d-lg-block">
             <div class="img-holder">
               <img
-                src="images/sitting.png"
+                src="/images/sitting.png"
                 alt="cartoonish drawing of Nicole sitting in a bean bag chair"
                 class="img-fluid about-section-img"
               />
             </div>
           </div>
-          <div class="col about-content">
+          <div class="col about-content primary-color">
             <h2>About Me</h2>
             <p>Young, driven, detail oriented, organized, and much more.</p>
             <a href="/pages/about.html">learn more</a>
@@ -126,10 +123,10 @@
         </div>
         <div class="col-lg-6 d-none d-lg-block circles">
           <div class="work-circle-outline">
-            <div class="work-circle">
+            <div class="work-circle primary-color">
               <div class="col-10 ml-auto img-holder">
                 <img
-                  src="images/laptop-and-phone.png"
+                  src="/images/laptop-and-phone.png"
                   alt="laptop and phone icon"
                   class="img-fluid work-section-img"
                 />
@@ -140,21 +137,21 @@
       </div>
       <div class="row contact-section">
         <div class="contact-accent position-absolute"></div>
-          <div class="col-lg-6 d-none d-lg-block">
-            <div class="img-holder">
-              <img
-                src="images/envelope.png"
-                alt="cartoonish envelope"
-                class="img-fluid contact-section-img"
-              />
-            </div>
+        <div class="col-lg-6 d-none d-lg-block">
+          <div class="img-holder">
+            <img
+              src="/images/envelope.png"
+              alt="cartoonish envelope"
+              class="img-fluid contact-section-img"
+            />
           </div>
-          <div class="col-6 contact-content">
-            <h2>Contact Me</h2>
-            <p>Like what you see? Reach out.</p>
-            <a href="/pages/contact.html">contact me</a>
-            <p class="arrow"><span class="point">></span></p>
-          </div>
+        </div>
+        <div class="col-6 contact-content">
+          <h2>Contact Me</h2>
+          <p>Like what you see? Reach out.</p>
+          <a href="/pages/contact.html">contact me</a>
+          <p class="arrow"><span class="point">></span></p>
+        </div>
       </div>
     </div>
     <footer>
