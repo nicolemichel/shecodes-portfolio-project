@@ -15,15 +15,15 @@ body {
   line-height: 1.5;
 }
 
+.row {
+  height: 70vh;
+}
+
 h2 {
   font-family: var(--headings-font);
   font-weight: 700;
   font-size: 60px;
   text-decoration: 5px underline var(--accent-color);
-}
-
-.row {
-  height: 90vh;
 }
 
 .primary-color {
@@ -100,14 +100,14 @@ a:hover {
 .arrow {
   position: relative;
   bottom: 1%;
-  width: 190px;
+  width: 250px;
   border: 2px solid var(--accent-color);
   box-sizing: border-box;
 }
 .point {
   position: relative;
   display: block;
-  margin: -16.5% -5% 0 0;
+  margin: -12.5% -3% 0 0;
   float: right;
   font-size: 38px;
   color: var(--accent-color);
@@ -149,9 +149,7 @@ strong {
   font-weight: 400;
 }
 .btn-primary-outline {
-  position: absolute;
-  bottom: 20%;
-  left: 15%;
+  left: 20%;
   font-family: var(--main-font);
   font-size: 30px;
   font-weight: 400;
@@ -170,42 +168,40 @@ strong {
   background: var(--accent-color);
   border-radius: 50%;
   width: 100%;
-  height: auto;
   padding-top: 100%;
+  margin-top: 20%;
 }
 .close-up {
-  top: -20%;
+  top: -1%;
   right: 10%;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
-  height: 146%;
-  width: 100%;
+  height: 122%;
+  width: 122%;
 }
 
 /*? about section ?*/
 .about-accent {
-  margin-top: 7%;
-  height: 70%;
+  margin: 4% 0;
+  height: 80% !important;
 }
 .about-section-img {
-  margin: -33% 0 0 4%;
+  margin: -35% 0 0 4%;
   position: relative;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  width: 90%;
 }
 .about-content {
-  height: 75%;
   float: right;
   width: 50%;
   padding: 4% 5%;
   position: relative;
-  margin-top: -46%;
-  margin-right: 2%;
+  margin: -38% 2% 0 0;
 }
 
 /*? work section ?*/
 .work-content {
-  margin-top: 15%;
   padding: 4% 5%;
 }
 .circles {
@@ -216,35 +212,34 @@ strong {
   border: 5px solid #cccccc;
   border-radius: 50%;
   background: transparent;
-  height: 105%;
-  width: 100%;
-  margin-top: -2%;
+  margin-top: -4.25%;
 }
 .work-circle {
   border-radius: 50%;
-  height: 90%;
-  width: 94%;
-  margin: 5% 3% 3% 3%;
+  margin: 5%;
 }
 .work-section-img {
   position: relative;
   padding-top: 10%;
   right: 45%;
+  width: 80%;
 }
 
 /*? contact section ?*/
 .contact-accent {
   border-left: 95vh solid var(--accent-color);
-  border-bottom: 90vh solid transparent;
-}
-.contact-content {
-  margin-top: 17%;
+  border-bottom: 70vh solid transparent;
 }
 .contact-section-img {
   position: relative;
   width: 80%;
   top: 9%;
   left: 15%;
+}
+.contact-content {
+  position: relative;
+  z-index: 2;
+  padding: 4% 5%;
 }
 
 /*! ABOUT PAGE !*/
@@ -264,7 +259,6 @@ strong {
   bottom: 38%;
   position: relative;
 }
-
 
 /*? coding journey section ?*/
 .coding-journey-content {
@@ -302,7 +296,7 @@ strong {
   overflow: hidden;
 }
 .testimonial-holder:last-child {
-  margin-top: -8%;
+  margin-top: -15%;
 }
 .quotes {
   font-size: 344px;
@@ -326,263 +320,58 @@ strong {
   font-weight: 600;
 }
 
-/*! MEDIA QUERIES !*/
-@media (max-width: 1400px) {
-  .close-up {
-    height: 110%;
-    top: -5%;
-  }
-  .btn-primary-outline {
-    bottom: 7%;
-  }
-  .img-holder {
-    width: 75%;
-  }
-  .about-content {
-    top: 43%;
-  }
+/*! WORK PAGE !*/
+/*? shecodes section ?*/
+.shecodes-content {
+  margin-top: 5%;
+  padding: 4% 5%;
 }
+
+/*? internship section ?*/
+.internship-content {
+  padding: 4% 5%;
+}
+
+/*! MEDIA QUERIES !*/
 
 @media (max-width: 991px) {
-  .row {
-    height: 70vh;
-  }
+  /*! HOME PAGE !*/
   #welcome-message {
-    padding: 11%;
-    width: 100%;
-  }
-  #welcome-message a {
-    left: 35%;
-  }
-  #welcome-circle {
-    display: none;
-  }
-  .btn-primary-outline {
-    bottom: 14%;
-  }
-  .about-accent {
-    height: 70%;
-    margin-top: 7%;
-  }
-  .about-content {
-    margin: -10% 8% 7% 10%;
-    width: 85%;
-  }
-  .work-content {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    padding-top: 10%;
-  }
-  .contact-accent {
-    border-left: 80vh solid var(--accent-color);
-    border-bottom: 70vh solid transparent;
-  }
-  .contact-content {
-    position: relative;
-    z-index: 2;
-    background: transparent;
-    left: 50%;
-    margin-top: 15%;
-  }
-}
-
-@media (max-width: 768px) {
-  #welcome-message {
-    padding: 10%;
-  }
-  .about-content {
-    margin-top: -20%;
-  }
-  .work-content {
-    margin-top: 20%;
-  }
-  .contact-accent {
-    display: none;
-  }
-  .contact-content {
-    top: 20%;
-    left: 15%;
-    width: 70%;
-  }
-}
-
-@media (max-width: 739px) {
-  body {
-    font-size: 16px;
-  }
-  h2 {
-    font-size: 56px;
-  }
-  .navbar-brand {
-    font-size: 26px;
-  }
-  nav a {
-    font-size: 26px;
-  }
-  nav a:hover {
-    font-size: 28px;
-  }
-  a {
-    font-size: 19px;
-  }
-
-  #welcome-message h1 {
-    font-size: 41px;
-  }
-  strong {
-    font-size: 96px;
-  }
-  #welcome-message p {
-    font-size: 46px;
-  }
-  .btn-primary-outline {
-    font-size: 26px;
-  }
-
-  #welcome-message {
-    padding: 10%;
-  }
-  #welcome-message a {
-    bottom: 10%;
-  }
-}
-
-@media (max-width: 698px) {
-  strong {
-    font-size: 80px;
-  }
-  #welcome-message p {
-    font-size: 40px;
-  }
-  #welcome-message a {
-    bottom: 15%;
-  }
-}
-
-@media (max-width: 414px) {
-  #welcome-message a {
-    left: 20%;
-  }
-  .about-accent {
-    margin-top: 20%;
-  }
-  .about-content {
-    margin-top: -30%;
-  }
-}
-
-@media (max-width: 360px) {
-  #welcome-message a {
-    bottom: 5%;
-    left: 20%;
-  }
-  .about-content {
-    height: 90%;
-    margin-top: -35%;
-  }
-}
-
-@media (max-width: 375px) {
-  .about-content {
-    margin-top: -35%;
-  }
-}
-
-@media (max-width: 320px) {
-  h2 {
-    font-size: 40px;
-  }
-  a {
-    font-size: 16px;
-  }
-
-  #welcome-message h1 {
-    font-size: 37px;
-  }
-  strong {
-    font-size: 54px;
-  }
-  #welcome-message p {
-    font-size: 32px;
-  }
-}
-
-/* iPad Pro */
-@media (max-width: 1024px), screen and (orientation: portrait) {
-  body {
-    font-size: 24px;
-  }
-  h2 {
-    font-size: 64px;
-  }
-  .navbar-brand {
-    font-size: 34px;
-  }
-  nav a {
-    font-size: 34px;
-  }
-  nav a:hover {
-    font-size: 36px;
-  }
-  a {
-    font-size: 27px;
-  }
-
-  #welcome-message h1 {
-    font-size: 48px;
-  }
-  strong {
-    font-size: 104px;
-  }
-  #welcome-message p {
-    font-size: 54px;
-  }
-  .btn-primary-outline {
-    font-size: 34px;
-  }
-
-  #welcome-message {
-    padding: 10%;
-  }
-  #welcome-message a {
-    bottom: 10%;
-  }
-  .close-up {
-    display: none;
-  }
-  #welcome-circle {
-    display: none;
-  }
-  #welcome-message {
+    text-align: center;
     width: 100%;
   }
   .btn-primary-outline {
-    bottom: 15%;
     left: 40%;
   }
-  .img-holder {
-    display: none;
-  }
   .about-content {
-    top: 65%;
-    width: 96%;
+    margin-top: -40%;
   }
-  .work-circle-outline {
-    display: none;
+}
+
+@media (max-width: 767px) {
+  /*! HOME PAGE !*/
+  .about-content {
+    margin-top: 6%;
+    width: 95%;
   }
   .work-content {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    padding-top: 40%;
+    width: 100%;
+    padding: 0 9%;
   }
   .contact-accent {
     display: none;
   }
   .contact-content {
-    top: 20%;
-    margin-left: 30%;
-    width: 70%;
+    padding: 0 9%;
+  }
+}
+
+@media (max-width: 622px) {
+  /*! HOME PAGE !*/
+  #welcome-message {
+    padding-top: 0;
+  }
+  .btn-primary-outline {
+    left: 35%;
   }
 }

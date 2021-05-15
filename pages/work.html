@@ -10,7 +10,7 @@
     />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -31,5 +31,120 @@
     <link href="/styles/site.css" rel="stylesheet" />
     <title>Work | Nicole Michel</title>
   </head>
-  <body></body>
+  <nav class="navbar navbar-expand-lg navbar-dark secondary-color pt-3">
+    <div class="container">
+      <a class="navbar-brand" href="/index.html">Nicole Michel</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/index.html">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/about.html">about me</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="/pages/work.html"
+              >my work</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/contact.html">contact me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div class="container-fluid">
+      <div class="row align-items-center text-center">
+        <div class="col-12 mb-5">
+          <strong>My Work</strong>
+        </div>
+      </div>
+    </div>
+  </header>
+  <body>
+    <div class="container-fluid">
+      <div class="row shecodes-section">
+        <div class="col-lg-6 d-none d-lg-block align-self-center">
+          <div class="img-holder rounded secondary-color p-3">
+            <img
+              src="/images/weather-app.png"
+              alt="Nicole's weather app"
+              class="img-fluid rounded weather-img"
+            />
+          </div>
+        </div>
+        <div class="col shecodes-content">
+          <h2>SheCodes</h2>
+          <a href="https://eager-galileo-d737f9.netlify.app/" target="_blank"
+            >Weather App</a
+          >
+          <p class="arrow"><span class="point">></span></p>
+          <p>
+            Created with
+            <a href="https://openweathermap.org/api" target="_blank"
+              >Weather API</a
+            >
+            and JavaScript.
+          </p>
+        </div>
+      </div>
+      <div class="row internship-section secondary-color">
+        <div class="col internship-content">
+          <h2>Internship</h2>
+          <a href="https://sgcmodernhomes.ca/index.html" target="_blank"
+            >SGC Modern Homes</a
+          >
+          <p class="arrow"><span class="point">></span></p>
+          <p>
+            JavaScript work - animation including page animations.
+          </p>
+          <a href="https://www.imperialtheatre.net/" target="_blank"
+            >Imperial Theatre</a
+          >
+          <p class="arrow"><span class="point">></span></p>
+          <p>
+            Responsive bug fixes.
+          </p>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block align-self-center">
+          <div class="col-9 rounded accent-color p-3">
+            <img
+              src="/images/sgc-screenshot.png"
+              alt="SGC Modern Homes screenshot"
+              class="img-fluid rounded homes-img"
+            />
+          </div>
+          <div class="col-9 rounded primary-color p-3">
+            <img
+              src="/images/theatre-screenshot.png"
+              alt="Imperial Theatre screenshot"
+              class="img-fluid rounded theatre-img"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <a href="https://github.com/nicolemichel"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/cntrlncl/"
+      ><i class="fab fa-instagram"></i
+    ></a>
+  </footer>
 </html>
