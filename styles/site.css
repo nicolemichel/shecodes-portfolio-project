@@ -132,6 +132,9 @@ footer a {
   color: var(--primary-color);
   margin: 1%;
 }
+footer .email {
+  font-weight: 100;
+}
 
 /*! HOME PAGE !*/
 #welcome-message {
@@ -268,9 +271,9 @@ strong {
 }
 .general-info-accent {
   position: relative;
-  width: 100%;
-  height: 120px;
-  bottom: 81%;
+  height: 131px;
+  width: 251%;
+  right: 138%;
 }
 
 /*? coding journey section ?*/
@@ -307,6 +310,9 @@ strong {
 }
 .testimonial-holder:last-child {
   margin-top: -15%;
+}
+.small-title {
+  text-decoration-color: var(--primary-color);
 }
 .quotes {
   font-size: 344px;
@@ -361,7 +367,6 @@ strong {
   color: var(--secondary-color);
 }
 
-
 /*! CONTACT PAGE !*/
 .contact-me-section .icons {
   font-size: 500px;
@@ -378,7 +383,6 @@ strong {
   color: var(--secondary-color);
 }
 
-
 /*! MEDIA QUERIES !*/
 @media (max-width: 991px) {
   /*! HOME PAGE !*/
@@ -392,11 +396,30 @@ strong {
   .about-content {
     margin-top: -40%;
   }
+  /*! ABOUT PAGE !*/
+  .general-info-content {
+    overflow: hidden;
+  }
+  .quotes {
+    font-size: 200px;
+  }
+}
+
+@media (max-width: 905px) {
+  body {
+    font-size: 18px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 767px) {
   .words {
-    padding: 3% 9%;
+    padding: 4% 9%;
     width: 95%;
   }
   /*! HOME PAGE !*/
@@ -405,6 +428,10 @@ strong {
   }
   .contact-accent {
     display: none;
+  }
+  /*! ABOUT PAGE !*/
+  .testimonial-content {
+    margin: -25% 0 -13% 0;
   }
 }
 
@@ -415,5 +442,38 @@ strong {
   }
   .btn-primary-outline {
     left: 35%;
+  }
+}
+
+@media (max-width: 624px) {
+  /*! ABOUT PAGE !*/
+  .general-info-accent {
+    height: 100px;
+  }
+}
+
+@media (max-width: 585px) {
+  /*! ABOUT PAGE !*/
+  .general-info-accent {
+    height: 72px;
+  }
+}
+
+@media (max-width: 489px) {
+  body {
+    font-size: 16px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  /*! ABOUT PAGE !*/
+  .testimonial-content {
+    margin: 15% 0 13% 0;
+  }
+  .quotes {
+    display: none;
   }
 }
