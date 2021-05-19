@@ -367,6 +367,13 @@ strong {
   color: var(--secondary-color);
 }
 
+.theatre {
+  float: right;
+  margin: -10% 5% 0 0;
+  position: relative;
+  z-index: 2;
+}
+
 /*! CONTACT PAGE !*/
 .contact-me-section .icons {
   font-size: 500px;
