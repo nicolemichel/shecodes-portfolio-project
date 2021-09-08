@@ -11,7 +11,7 @@ body {
   color: var(--secondary-color);
   font-family: var(--main-font);
   font-weight: 400;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1.5;
 }
 
@@ -33,20 +33,12 @@ h3 {
 
 .primary-color {
   background: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .secondary-color {
   background: var(--secondary-color);
   color: var(--primary-color);
-}
-.secondary-color a {
-  position: relative;
-  z-index: 2;
-  color: var(--primary-color);
-  transition: all 100ms ease-in-out;
-}
-.secondary-color a:hover {
-  color: #cccccc;
 }
 
 .accent-color {
@@ -85,7 +77,7 @@ nav a {
 }
 nav a:hover {
   color: #cccccc;
-  font-size: 32px;
+  font-weight: 400;
 }
 .navbar-toggler {
   border-color: var(--primary-color);
@@ -94,33 +86,19 @@ nav a:hover {
 a {
   font-family: var(--headings-font);
   font-weight: 600;
-  font-size: 23px;
+  font-size: 25px;
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--accent-color);
   transition: all 100ms ease-in-out;
+  z-index: 5;
+  position: relative;
 }
 a:hover {
-  color: var(--accent-color);
+  color: #cccccc;
 }
 
 .words {
   padding: 4% 5%;
-}
-
-.arrow {
-  position: relative;
-  width: 250px;
-  border: 2px solid var(--accent-color);
-  box-sizing: border-box;
-  margin-top: -1%;
-}
-.point {
-  position: relative;
-  display: block;
-  margin: -12.5% -3% 0 0;
-  float: right;
-  font-size: 38px;
-  color: var(--accent-color);
 }
 
 footer {
@@ -131,6 +109,9 @@ footer {
 footer a {
   color: var(--primary-color);
   margin: 1%;
+}
+footer a:hover {
+  color: var(--accent-color);
 }
 footer .email {
   font-weight: 100;
@@ -156,25 +137,57 @@ strong {
   font-size: 50px;
   font-weight: 400;
 }
-.btn-primary-outline {
-  left: 20%;
-  font-family: var(--main-font);
-  font-size: 30px;
+.btn {
+  font-family: var(--headings-font);
   font-weight: 400;
+  font-size: 20px;
   border-radius: 15px;
-  line-height: 27px;
-  padding: 15px 50px;
+  padding: 5px 20px;
   transition: all 100ms ease-in-out;
 }
 .btn-primary-outline {
+  left: 5%;
+  font-size: 30px;
+  line-height: 27px;
+  padding: 15px 50px;
   color: var(--primary-color);
-  border: 1px solid var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 .btn-primary-outline:hover {
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  border: none;
+}
+.btn-primary-outline-mini {
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  z-index: 5;
+  position: relative;
+}
+.btn-primary-outline-mini:hover {
+  color: var(--secondary-color);
+  background: var(--primary-color);
+  border: none;
+}
+.btn-secondary-outline {
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+}
+.btn-secondary-outline:hover {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  border: none;
+}
+.btn-accent-outline {
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+.btn-accent-outline:hover {
   color: var(--secondary-color);
   background: var(--accent-color);
   border: none;
 }
+
 #welcome-circle {
   background: var(--accent-color);
   border-radius: 50%;
@@ -247,43 +260,53 @@ strong {
 }
 
 /*! ABOUT PAGE !*/
-/*? general info section ?*/
-.general-info-section {
-  height: 70vh !important;
+/*? skill set section ?*/
+.bars-holder {
+  margin: 2% 0;
 }
-.general-info-section ul {
-  list-style: none;
+.bar {
+  background: var(--accent-color);
+  height: 38px;
+  margin: 2px 0;
+  padding-left: 5%;
 }
-.general-info-section ul li::before {
-  content: "\2022";
-  color: var(--accent-color);
-  font-weight: bold;
-  display: inline-block;
-  width: 1em;
-  margin-left: -0.5em;
+.bar:nth-child(2n) {
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
-.general-info-img {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 85%;
-  top: -22%;
-}
-.general-info-accent {
-  position: relative;
-  height: 131px;
-  width: 251%;
-  right: 138%;
+.bar:nth-child(3n) {
+  background: #a6a6a6;
 }
 
 /*? coding journey section ?*/
+.mini-strong {
+  font-size: 27px;
+}
+
 .coding-journey-circles {
   text-align: center;
-  width: 222px;
-  height: 222px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   margin: 5%;
-  padding: 20% 10%;
+  padding: 19% 10% !important;
+}
+
+.hover-change:after {
+  content: 'Future \a work with you';
+  white-space: pre-wrap;
+  transition: all 100ms ease-in-out;
+  padding-top: 20%;
+}
+.hover-change:hover {
+  border: 1px solid var(--primary-color);
+  color: #517e69;
+  background: none;
+  transition: all 100ms ease-in-out;
+}
+.hover-change:hover:after {
+  content: 'contact me';
+  transition: all 100ms ease-in-out;
 }
 
 .coding-journey-circles h5 {
@@ -304,6 +327,51 @@ strong {
   color: var(--secondary-color);
 }
 
+/*? general info section ?*/
+.general-info-section {
+  height: 70vh !important;
+}
+.general-info-section ul {
+  list-style: none;
+}
+.general-info-section ul li::before {
+  content: "\263B";
+  color: var(--accent-color);
+  font-weight: bold;
+  display: inline-block;
+  width: 1.5em;
+  margin-left: -1em;
+}
+.square {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+}
+.info-img-square-green {
+  left: 15%;
+  margin-top: 5%;
+  z-index: 2;
+}
+.info-img-square-grey {
+  background: #cccccc;
+  left: 25%;
+  margin-top: 15%;
+  z-index: 1;
+}
+.general-info-img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 85%;
+  top: -20%;
+}
+.general-info-accent {
+  position: relative;
+  height: 131px;
+  width: 251%;
+  right: 138%;
+}
+
 /*? testimonials section ?*/
 .testimonials-section {
   overflow: hidden;
@@ -319,6 +387,7 @@ strong {
   font-family: var(--headings-font);
   font-weight: 700;
   margin: 0;
+  color: var(--primary-color);
 }
 .green {
   color: var(--accent-color);
@@ -330,6 +399,9 @@ strong {
   padding: 50px 55px;
   border-radius: 25px;
   margin: -45% 0 -25% 0;
+}
+.testimonial-right {
+  margin-top: 25%;
 }
 .who {
   font-family: var(--headings-font);
@@ -398,7 +470,10 @@ strong {
     width: 100%;
   }
   .btn-primary-outline {
-    left: 40%;
+    left: 34.5%;
+  }
+  .about-section-img {
+    top: 5%;
   }
   /*! ABOUT PAGE !*/
   .general-info-content {
@@ -418,6 +493,12 @@ strong {
   }
   h3 {
     font-size: 30px;
+  }
+  .btn-primary-outline {
+    left: 37%;
+  }
+  .about-section-img {
+    top: 10%;
   }
 }
 
